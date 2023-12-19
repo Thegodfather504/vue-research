@@ -1,0 +1,16 @@
+FROM node:latest
+RUN apt-get update && apt-get install -y \
+nano \
+vim
+
+# Vue dev port
+EXPOSE 5173
+EXPOSE 8080
+
+# Check that node and npm have install
+RUN node --version
+RUN npm --v
+# Check typescript install
+RUN npm install -g typescript
+
+
